@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+:root { --bg:#fbf5e9; --card:#fffaf0; --card2:#f6efe1; --ink:#2a1d12; --mute:#7d6e5d; --line:#e6dcc8; --brand:#c4552d; }
+body { background:var(--bg); color:var(--ink); font-family:'Outfit',system-ui,sans-serif; }
+.font-display { font-family:'Fraunces',Georgia,serif; font-weight:800; }
+.bg-card { background:var(--card); } .bg-card2 { background:var(--card2); } .bg-brand { background:var(--brand); }
+.text-brand { color:var(--brand); } .text-mute { color:var(--mute); }
+.border-line { border-color:var(--line); } .bg-line { background:var(--line); }
+input, select { background:var(--card); color:var(--ink); border:1px solid var(--line); border-radius:9999px; padding:.6rem 1rem; outline:none; }
+input:focus-visible, select:focus-visible, a:focus-visible, label:focus-within { outline:2px solid var(--brand); outline-offset:2px; }

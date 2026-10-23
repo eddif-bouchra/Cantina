@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <img src="img">
+  <title>Cantine YouCode</title>
+  
+  <link rel="stylesheet" href="./output.css">
+</head>
+
+<body class="min-h-screen">
+  <input type="checkbox" id="dark" class="sr-only">
+
+  
+  <header class="flex flex-wrap items-center gap-4 px-5 py-4 border-b border-line">
+    <div class="w-14 h-14 rounded-full bg-brand grid place-items-center text-2xl text-white">🍽️</div>
+    <div class="mr-auto">
+      <h1 class="font-display text-3xl leading-none">Cantine YouCode</h1>
+      <p class="text-mute text-sm mt-1">Menu officiel  Lundi | Vendredi</p>
+    </div>
+    
+    <a class="px-5 py-2.5 rounded-full bg-brand text-white font-bold">+ Nouvelle recette</a>
+  </header>
+
+  <main class="p-4 md:p-5 max-width: 1400px; mx-auto">
+
+    
+    <section class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-5">
+      <div class="rounded-2xl border border-line bg-card p-4 shadow-sm">
+        <p class="text-sm text-mute">Plats en réserve</p>
+        <p class="font-display text-2xl mt-1">8 / 8</p>
+      </div>
+      <div class="rounded-2xl border border-line bg-card p-4 shadow-sm">
+        <p class="text-sm text-mute">Jours prêts</p>
+        <p class="font-display text-2xl mt-1">0/5 jours prêts</p>
+      </div>
+      <div class="rounded-2xl border border-line bg-card p-4 shadow-sm">
+        <p class="text-sm text-mute">Coût semaine / apprenant</p>
+        <p class="font-display text-2xl mt-1">0 DH</p>
+      </div>
+      <div class="rounded-2xl border border-line bg-card p-4 shadow-sm">
+        <p class="text-sm text-mute">Équilibre alimentaire</p>
+        <p class="mt-2"><span class="px-3 py-1 rounded-full text-sm font-bold text-white bg-amber-600">Aucun
+            végétarien</span></p>
+      </div>
+    </section>
+
+    <div class="grid lg:grid-cols-[380px_1fr] gap-5 items-start">
+
+      
+      <aside class="rounded-3xl border border-line bg-card p-5">
+        <h2 class="font-display text-2xl mb-4">Garde-Manger</h2>
+        <div class="flex flex-col gap-3  max-height: 640px; overflow-y-auto pr-1">
+
+          <article class="rounded-2xl border border-line border-l-[5px] border-l-green-700 bg-card2 p-3.5">
+            <div class="flex justify-between gap-2">
+              <h3 class="font-semibold">Velouté de légumes</h3><span class="font-bold text-brand">5 DH</span>
+            </div>
+            <div class="flex gap-2 my-2"><span
+                class="px-2.5 py-0.5 rounded-full text-xs font-bold text-white bg-green-700">Entrée</span><span
+                class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-line">Végétarien</span></div>
+            <select class="w-full text-sm" aria-label="Disponibilité">
+              <option>En réserve</option>
+              <option>Épuisé</option>
+            </select>
+            <div class="flex justify-between mt-2"><button
+                class="px-3.5 py-1.5 rounded-full border border-line bg-card text-sm font-semibold">Modifier</button><button
+                class="px-4 py-1.5 rounded-full bg-red-700 text-white text-sm font-bold">Supprimer</button></div>
+          </article>
+
+          <article class="rounded-2xl border border-line border-l-[5px] border-l-green-700 bg-card2 p-3.5">
+            <div class="flex justify-between gap-2">
+              <h3 class="font-semibold">Salade marocaine</h3><span class="font-bold text-brand">6 DH</span>
+            </div>
+            <div class="flex gap-2 my-2"><span
+                class="px-2.5 py-0.5 rounded-full text-xs font-bold text-white bg-green-700">Entrée</span><span
+                class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-line">Bio</span></div>
+            <select class="w-full text-sm" aria-label="Disponibilité">
+              <option>En réserve</option>
+              <option>Épuisé</option>
+            </select>
+            <div class="flex justify-between mt-2"><button
+                class="px-3.5 py-1.5 rounded-full border border-line bg-card text-sm font-semibold">Modifier</button><button
+                class="px-4 py-1.5 rounded-full bg-red-700 text-white text-sm font-bold">Supprimer</button></div>
+          </article>
+
+          <article class="rounded-2xl border border-line border-l-[5px] border-l-green-700 bg-card2 p-3.5">
+            <div class="flex justify-between gap-2">
+              <h3 class="font-semibold">Harira</h3><span class="font-bold text-brand">4 DH</span>
+            </div>
+            <div class="flex gap-2 my-2"><span
+                class="px-2.5 py-0.5 rounded-full text-xs font-bold text-white bg-green-700">Entrée</span></div>
+            <select class="w-full text-sm" aria-label="Disponibilité">
+              <option>En réserve</option>
+              <option>Épuisé</option>
+            </select>
+            <div class="flex justify-between mt-2"><button
+                class="px-3.5 py-1.5 rounded-full border border-line bg-card text-sm font-semibold">Modifier</button><button
+                class="px-4 py-1.5 rounded-full bg-red-700 text-white text-sm font-bold">Supprimer</button></div>
+          </article>
+
+          <article class="rounded-2xl border border-line border-l-[5px] border-l-orange-700 bg-card2 p-3.5">
+            <div class="flex justify-between gap-2">
+              <h3 class="font-semibold">Tajine de poulet</h3><span class="font-bold text-brand">28 DH</span>
+            </div>
+            <div class="flex gap-2 my-2"><span
+                class="px-2.5 py-0.5 rounded-full text-xs font-bold text-white bg-orange-700">Plat principal</span>
+            </div>
+            <select class="w-full text-sm" aria-label="Disponibilité">
+              <option>En réserve</option>
+              <option>Épuisé</option>
+            </select>
+            <div class="flex justify-between mt-2"><button
+                class="px-3.5 py-1.5 rounded-full border border-line bg-card text-sm font-semibold">Modifier</button><button
+                class="px-4 py-1.5 rounded-full bg-red-700 text-white text-sm font-bold">Supprimer</button></div>
+          </article>
+
+          <article class="rounded-2xl border border-line border-l-[5px] border-l-orange-700 bg-card2 p-3.5">
+            <div class="flex justify-between gap-2">
+              <h3 class="font-semibold">Couscous aux légumes</h3><span class="font-bold text-brand">22 DH</span>
+            </div>
+            <div class="flex gap-2 my-2"><span
+                class="px-2.5 py-0.5 rounded-full text-xs font-bold text-white bg-orange-700">Plat principal</span><span
+                class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-line">Végétarien</span></div>
+            <select class="w-full text-sm" aria-label="Disponibilité">
+              <option>En réserve</option>
+              <option>Épuisé</option>
+            </select>
+            <div class="flex justify-between mt-2"><button
+                class="px-3.5 py-1.5 rounded-full border border-line bg-card text-sm font-semibold">Modifier</button><button
+                class="px-4 py-1.5 rounded-full bg-red-700 text-white text-sm font-bold">Supprimer</button></div>
+          </article>
+
+          <article class="rounded-2xl border border-line border-l-[5px] border-l-orange-700 bg-card2 p-3.5">
+            <div class="flex justify-between gap-2">
+              <h3 class="font-semibold">Brochettes de kefta</h3><span class="font-bold text-brand">26 DH</span>
+            </div>
+            <div class="flex gap-2 my-2"><span
+                class="px-2.5 py-0.5 rounded-full text-xs font-bold text-white bg-orange-700">Plat principal</span>
+            </div>
+            <select class="w-full text-sm" aria-label="Disponibilité">
+              <option>En réserve</option>
+              <option>Épuisé</option>
+            </select>
+            <div class="flex justify-between mt-2"><button
+                class="px-3.5 py-1.5 rounded-full border border-line bg-card text-sm font-semibold">Modifier</button><button
+                class="px-4 py-1.5 rounded-full bg-red-700 text-white text-sm font-bold">Supprimer</button></div>
+          </article>
+
+          <article class="rounded-2xl border border-line border-l-[5px] border-l-pink-700 bg-card2 p-3.5">
+            <div class="flex justify-between gap-2">
+              <h3 class="font-semibold">Salade de fruits</h3><span class="font-bold text-brand">6 DH</span>
+            </div>
+            <div class="flex gap-2 my-2"><span
+                class="px-2.5 py-0.5 rounded-full text-xs font-bold text-white bg-pink-700">Dessert</span><span
+                class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-line">Bio</span></div>
+            <select class="w-full text-sm" aria-label="Disponibilité">
+              <option>En réserve</option>
+              <option>Épuisé</option>
+            </select>
+            <div class="flex justify-between mt-2"><button
+                class="px-3.5 py-1.5 rounded-full border border-line bg-card text-sm font-semibold">Modifier</button><button
+                class="px-4 py-1.5 rounded-full bg-red-700 text-white text-sm font-bold">Supprimer</button></div>
+          </article>
+
+          <article class="rounded-2xl border border-line border-l-[5px] border-l-pink-700 bg-card2 p-3.5">
+            <div class="flex justify-between gap-2">
+              <h3 class="font-semibold">Orange à la cannelle</h3><span class="font-bold text-brand">5 DH</span>
+            </div>
+            <div class="flex gap-2 my-2"><span
+                class="px-2.5 py-0.5 rounded-full text-xs font-bold text-white bg-pink-700">Dessert</span></div>
+            <select class="w-full text-sm" aria-label="Disponibilité">
+              <option>En réserve</option>
+              <option>Épuisé</option>
+            </select>
+            <div class="flex justify-between mt-2"><button
+                class="px-3.5 py-1.5 rounded-full border border-line bg-card text-sm font-semibold">Modifier</button><button
+                class="px-4 py-1.5 rounded-full bg-red-700 text-white text-sm font-bold">Supprimer</button></div>
+          </article>
+
+        </div>
+      </aside>
+
+      
+      <section class="rounded-3xl border border-line bg-card p-5 min-w-0">
+        <div class="flex flex-wrap items-center gap-3 mb-4">
+          <h2 class="font-display text-2xl mr-auto">Menu de la semaine</h2>
+          <button class="px-4 py-2 rounded-full border border-line bg-card font-semibold"> Compléter la
+            semaine</button>
+          <button class="px-4 py-2 rounded-full border border-line bg-card font-semibold"> Vue tableau</button>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4">
+
+          
+          <div class="rounded-2xl border border-line bg-card2 p-4 flex flex-col gap-2.5">
+            <div class="flex justify-between items-center">
+              <h3 class="font-display text-xl">Lundi</h3><button
+                class="px-3 py-1 rounded-full border border-line bg-card text-sm text-mute font-semibold">Vider</button>
+            </div>
+            <div class="rounded-xl p-3 border border-dashed border-line"><span
+                class="px-2.5 py-0.5 rounded-full text-xs font-bold text-white bg-green-700">Entrée</span>
+              <select
+                aria-label="Filtrer par catégorie">
+                <option>Toutes</option>
+                <option>Entrée</option>
+                <option>Plat principal</option>
+                <option>Dessert</option>
+              </select>
+            </div>
+            <div class="rounded-xl p-3 border border-dashed border-line"><span
+                class="px-2.5 py-0.5 rounded-full text-xs font-bold text-white bg-orange-700">Plat principal</span>
+              <p class="text-mute text-sm mt-1">Glissez un plat principal ici</p>
+            </div>
+            <div class="rounded-xl p-3 border border-dashed border-line"><span
+                class="px-2.5 py-0.5 rounded-full text-xs font-bold text-white bg-pink-700">Dessert</span>
+              <p class="text-mute text-sm mt-1">Glissez un dessert ici</p>
+            </div>
+            <div class="border-t border-line pt-2 flex justify-between font-semibold"><span>Total Jour</span><span>0 DH
+                / 50 DH max</span></div>
+            <div class="h-2 rounded-full bg-line overflow-hidden">
+              <div class="h-full w-0 rounded-full bg-green-700"></div>
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-line bg-card2 p-4 flex flex-col gap-2.5">
+            <div class="flex justify-between items-center">
+              <h3 class="font-display text-xl">Mardi</h3><button
+                class="px-3 py-1 rounded-full border border-line bg-card text-sm text-mute font-semibold">Vider</button>
+            </div>
+            <div class="rounded-xl p-3 border border-dashed border-line"><span
+                class="px-2.5 py-0.5 rounded-full text-xs font-bold text-white bg-green-700">Entrée</span>
+              <p class="text-mute text-sm mt-1">Glissez une entrée ici</p>
+            </div>
+            <div class="rounded-xl p-3 border border-dashed border-line"><span
+                class="px-2.5 py-0.5 rounded-full text-xs font-bold text-white bg-orange-700">Plat principal</span>
+              <p class="text-mute text-sm mt-1">Glissez un plat principal ici</p>
+            </div>
+            <div class="rounded-xl p-3 border border-dashed border-line"><span
+                class="px-2.5 py-0.5 rounded-full text-xs font-bold text-white bg-pink-700">Dessert</span>
+              <p class="text-mute text-sm mt-1">Glissez un dessert ici</p>
+            </div>
+            <div class="border-t border-line pt-2 flex justify-between font-semibold"><span>Total Jour</span><span>0 DH
+                / 50 DH max</span></div>
+            <div class="h-2 rounded-full bg-line overflow-hidden">
+              <div class="h-full w-0 rounded-full bg-green-700"></div>
+            </div>
+          </div>
+
+          
+          <div class="rounded-2xl border border-line bg-card2 p-4 flex flex-col gap-2.5">
+            <div class="flex justify-between items-center">
+              <h3 class="font-display text-xl">Mercredi</h3><button
+                class="px-3 py-1 rounded-full border border-line bg-card text-sm text-mute font-semibold">Vider</button>
+            </div>
+            <div class="rounded-xl p-3 border border-dashed border-line"><span
+                class="px-2.5 py-0.5 rounded-full text-xs font-bold text-white bg-green-700">Entrée</span>
+              <p class="text-mute text-sm mt-1">Glissez une entrée ici</p>
+            </div>
+            <div class="rounded-xl p-3 border border-dashed border-line"><span
+                class="px-2.5 py-0.5 rounded-full text-xs font-bold text-white bg-orange-700">Plat principal</span>
+              <p class="text-mute text-sm mt-1">Glissez un plat principal ici</p>
+            </div>
+            <div class="rounded-xl p-3 border border-dashed border-line"><span
+                class="px-2.5 py-0.5 rounded-full text-xs font-bold text-white bg-pink-700">Dessert</span>
+              <p class="text-mute text-sm mt-1">Glissez un dessert ici</p>
+            </div>
+            <div class="border-t border-line pt-2 flex justify-between font-semibold"><span>Total Jour</span><span>0 DH
+                / 50 DH max</span></div>
+            <div class="h-2 rounded-full bg-line overflow-hidden">
+              <div class="h-full w-0 rounded-full bg-green-700"></div>
+            </div>
+          </div>
+
+          
+          <div class="rounded-2xl border border-line bg-card2 p-4 flex flex-col gap-2.5">
+            <div class="flex justify-between items-center">
+              <h3 class="font-display text-xl">Jeudi</h3><button
+                class="px-3 py-1 rounded-full border border-line bg-card text-sm text-mute font-semibold">Vider</button>
+            </div>
+            <div class="rounded-xl p-3 border border-dashed border-line"><span
+                class="px-2.5 py-0.5 rounded-full text-xs font-bold text-white bg-green-700">Entrée</span>
+              <p class="text-mute text-sm mt-1">Glissez une entrée ici</p>
+            </div>
+            <div class="rounded-xl p-3 border border-dashed border-line"><span
+                class="px-2.5 py-0.5 rounded-full text-xs font-bold text-white bg-orange-700">Plat principal</span>
+              <p class="text-mute text-sm mt-1">Glissez un plat principal ici</p>
+            </div>
+            <div class="rounded-xl p-3 border border-dashed border-line"><span
+                class="px-2.5 py-0.5 rounded-full text-xs font-bold text-white bg-pink-700">Dessert</span>
+              <p class="text-mute text-sm mt-1">Glissez un dessert ici</p>
+            </div>
+            <div class="border-t border-line pt-2 flex justify-between font-semibold"><span>Total Jour</span><span>0 DH
+                / 50 DH max</span></div>
+            <div class="h-2 rounded-full bg-line overflow-hidden">
+              <div class="h-full w-0 rounded-full bg-green-700"></div>
+            </div>
+          </div>
+
+          
+          <div class="rounded-2xl border border-line bg-card2 p-4 flex flex-col gap-2.5">
+            <div class="flex justify-between items-center">
+              <h3 class="font-display text-xl">Vendredi</h3><button
+                class="px-3 py-1 rounded-full border border-line bg-card text-sm text-mute font-semibold">Vider</button>
+            </div>
+            <div class="rounded-xl p-3 border border-dashed border-line"><span
+                class="px-2.5 py-0.5 rounded-full text-xs font-bold text-white bg-green-700">Entrée</span>
+              <p class="text-mute text-sm mt-1">Glissez une entrée ici</p>
+            </div>
+            <div class="rounded-xl p-3 border border-dashed border-line"><span
+                class="px-2.5 py-0.5 rounded-full text-xs font-bold text-white bg-orange-700">Plat principal</span>
+              <p class="text-mute text-sm mt-1">Glissez un plat principal ici</p>
+            </div>
+            <div class="rounded-xl p-3 border border-dashed border-line"><span
+                class="px-2.5 py-0.5 rounded-full text-xs font-bold text-white bg-pink-700">Dessert</span>
+              <p class="text-mute text-sm mt-1">Glissez un dessert ici</p>
+            </div>
+            <div class="border-t border-line pt-2 flex justify-between font-semibold"><span>Total Jour</span><span>0 DH
+                / 50 DH max</span></div>
+            <div class="h-2 rounded-full bg-line overflow-hidden">
+              <div class="h-full w-0 rounded-full bg-green-700"></div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </main>
+
+ 
+  <div id="modal" class="hidden target:block fixed inset-0 z-50 bg-black/50 p-4 overflow-y-auto">
+    <div class="max-w-md mx-auto mt-10 rounded-3xl bg-card border border-line p-6" role="dialog"
+      aria-labelledby="mTitle">
+      <h3 id="mTitle" class="font-display text-2xl mb-4">Nouvelle recette</h3>
+      <div class="flex flex-col gap-3">
+        <label class="text-sm font-semibold">Nom du plat<input class="w-full mt-1 font-normal"
+            placeholder="Ex. Tajine de poulet"></label>
+        <label class="text-sm font-semibold">Prix (DH)<input type="number" min="0" class="w-full mt-1 font-normal"
+            placeholder="12"></label>
+        <label class="text-sm font-semibold">Catégorie<select class="w-full mt-1 font-normal">
+            <option>Entrée</option>
+            <option>Plat principal</option>
+            <option>Dessert</option>
+          </select></label>
+        <label class="text-sm font-semibold">Étiquette<select class="w-full mt-1 font-normal">
+            <option>Aucune</option>
+            <option>Végétarien</option>
+            <option>Bio</option>
+          </select></label>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
