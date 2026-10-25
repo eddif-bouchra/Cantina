@@ -8,6 +8,7 @@
   <title>Cantine YouCode</title>
 
   <link rel="stylesheet" href="./output.css">
+  <script src="Cantina.js" defer></script>
 </head>
 
 <body class="min-h-screen">
@@ -21,7 +22,7 @@
       <p class="text-mute text-sm mt-1">Menu officiel Lundi | Vendredi</p>
     </div>
 
-    <a class="px-5 py-2.5 rounded-full bg-brand text-white font-bold">+ Nouvelle recette</a>
+    <button id="openPopup" type="button"class="px-5 py-2.5 rounded-full bg-brand text-white font-bold">+ Nouvelle recette</button>
   </header>
 
   <main class="p-4 md:p-5 max-width: 1400px; mx-auto">
@@ -42,8 +43,7 @@
       </div>
       <div class="rounded-2xl border border-line bg-card p-4 shadow-sm">
         <p class="text-sm text-mute">Équilibre alimentaire</p>
-        <p class="mt-2"><span class="px-3 py-1 rounded-full text-sm font-bold text-white bg-amber-600">Aucun
-            végétarien</span></p>
+        <p class="mt-2"><span class="px-3 py-1 rounded-full text-sm font-bold text-white bg-amber-600">Aucun végétarien</span></p>
       </div>
     </section>
 
@@ -430,32 +430,11 @@
   </main>
 
 
-  <div id="modal" class="hidden target:block fixed inset-0 z-50 bg-black/50 p-4 overflow-y-auto">
-    <div class="max-w-md mx-auto mt-10 rounded-3xl bg-card border border-line p-6" role="dialog"
-      aria-labelledby="mTitle">
-      <h3 id="mTitle" class="font-display text-2xl mb-4">Nouvelle recette</h3>
-      <div class="flex flex-col gap-3">
-        <label class="text-sm font-semibold">Nom du plat<input class="w-full mt-1 font-normal"
-            placeholder="Ex. Tajine de poulet"></label>
-        <label class="text-sm font-semibold">Prix (DH)<input type="number" min="0" class="w-full mt-1 font-normal"
-            placeholder="12"></label>
-        <label class="text-sm font-semibold">Catégorie<select class="w-full mt-1 font-normal">
-            <option>Entrée</option>
-            <option>Plat principal</option>
-            <option>Dessert</option>
-          </select></label>
-        <label class="text-sm font-semibold">Étiquette<select class="w-full mt-1 font-normal">
-            <option>Aucune</option>
-            <option>Végétarien</option>
-            <option>Bio</option>
-          </select></label>
-      </div>
-    </div>
-  </div>
-  <div class="flex w-full h-full items-center justify-center  absolute top-0 left-0 ">
- <form class="flex flex-col   border border-gray-400 rounded-3xl p-8 bg-amber-50">
-    <label for="nom">Nom du palet</label>
-    <input id="nom" type="text" class="border-2 rounded-xl text-center p-2 " placeholder="Enter le nom du plat">
+  
+  <div  id ="popup" class="fixed  hidden inset-0 z-50  items-center justify-center bg-black/40 p-4">
+ <form  class="flex w-full max-w-md max-h-[90vh] overflow-y-auto flex-col gap-5 rounded-3xl border border-line bg-card p-6 shadow-2xl">
+    <label for="nom">Nom du plat</label>
+    <input id="nom" type="text" class="border-2 rounded-xl text-center p-2 " placeholder="Entrer le nom du plat">
     <label for="prix">Le prix</label>
     <input id="prix" type="number" placeholder="Le prix" class="border-2 rounded-xl text-center p-2">
     <label for="categ">Choisir catégorie</label>
@@ -465,7 +444,7 @@
       <option value="Entre">Entrée</option>
       <option value="Dessert">Dessert</option>
     </select>
-    <P>Badge Qualifiant</P>
+    <p>Badge Qualifiant</p>
     <div class="flex gap-4 items-center">
       <label for="badge">Bio</label>
       <input type="radio" name="badge" value="Bio">
@@ -475,10 +454,10 @@
       <input type="radio" name="badge" value="Classique">
     </div>
     <div class="w-full flex items-center justify-center gap-5">
-      <button id="enregistrer" class="bg-brand p-2 rounded-xl" type="button">Ajouter</button>
-      <button id="annuler" class="bg-brand p-2 rounded-xl " type="button">Fermer</button>
+      <button id="enregistrer" class="flex-1 rounded-xl bg-brand p-3 font-bold text-white hover:opacity-90 transition" type="button">Ajouter</button>
+      <button id="annuler" class="flex-1 rounded-xl border border-line bg-card2 p-3 font-semibold hover:bg-line transition" type="button">Fermer</button>
     </div>
- </form>
+    </form>
   </div>
 
 </body>
