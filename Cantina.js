@@ -1,7 +1,6 @@
 const openPopup = document.getElementById("openPopup");
 const popup = document.getElementById("popup");
 const annuler = document.getElementById("annuler");
-const hamza = document.getElementById("")
 
 openPopup.addEventListener("click", function () {
     popup.classList.remove("hidden");
@@ -83,7 +82,7 @@ function afficherRecettes() {
             <p class="bg-gray-400 text-white rounded-3xl">${recette.badge}</p></div>
             <div class="flex  justify-between mt-4">
             <button data-id="${recette.id}" class="bg-[#fffaf0] text-[#2a1d12] rounded-2xl">Modifier</button>
-            <button data-id="${recette.id}" class="bg-red-700 text-white rounded-2xl">Supprimer</button>
+            <button data-id="${recette.id}"id ="3ezii"  class="bg-red-700 text-white rounded-2xl">Supprimer</button>
             </div>
             </div>
         `;
@@ -137,3 +136,17 @@ enregistrer.addEventListener("click", ajouterRecettes);
 
 afficherRecettes();
 
+function SupprimerRecettes(id) {
+    recipes = recipes.filter(function(recette) {
+        return recette.id !== id;
+    });
+
+    afficherRecettes();
+}
+
+listeRecettes.addEventListener("click", function(e) {
+    if (e.target.textContent === "Supprimer") {
+        let id = Number(e.target.dataset.id);
+        SupprimerRecettes(id);
+    }
+});
