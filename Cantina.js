@@ -28,37 +28,37 @@ let recipes = [
         categorie: "Entre",
         badge: "Bio"
     },
-    {
+    {   id:3,
         nom: "Tajine de poulet",
         prix: 30,
         categorie: "plat principal",
         badge: "Classique"
     },
-    {
+    {   id:4,
         nom: "Couscous végétarien",
         prix: 28,
         categorie: "plat principal",
         badge: "Végétarien"
     },
-    {
+    {   id:5,
         nom: "Pâtes à la tomate",
         prix: 20,
         categorie: "plat principal",
         badge: "Classique"
     },
-    {
+    {   id:6,
         nom: "Salade de fruits",
         prix: 8,
         categorie: "Dessert",
         badge: "Bio"
     },
-    {
+    {   id:7,
         nom: "Yaourt nature",
         prix: 5,
         categorie: "Dessert",
         badge: "Classique"
     },
-    {
+    {   id:8,
         nom: "Cake à la banane",
         prix: 10,
         categorie: "Dessert",
@@ -76,14 +76,14 @@ function afficherRecettes() {
         let article = document.createElement("article");
 
         article.innerHTML = `
-            <div class ="bg-blue-400 mb-4 rounded-2xl p-2">
-            <div class ="flex justify-between mb-3"><h3 class="bg-amber-200 rounded-2xl p-2">${recette.nom}</h3>
-            <p class="bg-amber-500 rounded-2xl p-2 ">${recette.prix} DH</p></div>
-            <div class = "flex "><p class = "pr-2 bg-cyan-200 mr-1.5">${recette.categorie}</p>
-            <p class ="bg-fuchsia-700">${recette.badge}</p></div>
-            <div class ="flex  justify-between mt-4">
-            <button data-id="${recette.id}" class ="">Modifier</button>
-            <button data-id ="${recette.id}" class ="bg-amber-50">Supprimer</button>
+            <div class="bg-[#f6efe1] mb-4 rounded-2xl p-2">
+            <div class="flex justify-between mb-3"><h3 class="bg-[#fffaf0] text-[#2a1d12] rounded-2xl p-2">${recette.nom}</h3>
+            <p class="bg-[#c4552d] text-white rounded-2xl p-2 ">${recette.prix} DH</p></div>
+            <div class="flex "><p class="pr-2 bg-green-700 text-white mr-1.5 rounded-3xl">${recette.categorie}</p>
+            <p class="bg-gray-400 text-white rounded-3xl">${recette.badge}</p></div>
+            <div class="flex  justify-between mt-4">
+            <button data-id="${recette.id}" class="bg-[#fffaf0] text-[#2a1d12] rounded-2xl">Modifier</button>
+            <button data-id="${recette.id}" class="bg-red-700 text-white rounded-2xl">Supprimer</button>
             </div>
             </div>
         `;
@@ -136,3 +136,4 @@ function ajouterRecettes() {
 enregistrer.addEventListener("click", ajouterRecettes);
 
 afficherRecettes();
+
