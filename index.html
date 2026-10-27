@@ -9,6 +9,7 @@
 
   <link rel="stylesheet" href="./output.css">
   <script src="Cantina.js" defer></script>
+
 </head>
 
 <body class="min-h-screen">
@@ -56,6 +57,7 @@
              class="flex flex-col gap-3 max-h-640px overflow-y-auto pr-1">
         </div>
     </aside>
+    
 
       <section class="rounded-3xl border border-line bg-card p-5 min-w-0">
         <div class="flex flex-wrap items-center gap-3 mb-4">
@@ -296,13 +298,13 @@
 
 
   
-  <div  id ="popup" class="fixed  hidden inset-0 z-50  items-center justify-center bg-black/40 p-4">
+<div  id ="popup" class="fixed  hidden inset-0 z-50  items-center justify-center bg-black/40 p-4">
  <form  class="flex w-full max-w-md max-h-[90vh] overflow-y-auto flex-col gap-5 rounded-3xl border border-line bg-card p-6 shadow-2xl">
     <label for="nom">Nom du plat</label>
     <input id="nom" type="text" class="border-2 rounded-xl text-center p-2 " placeholder="Entrer le nom du plat">
     <label for="prix">Le prix</label>
     <input id="prix" type="number" placeholder="Le prix" class="border-2 rounded-xl text-center p-2">
-    <label for="categ">Choisir catégorie</label>
+    <label for="catégorie">Choisir catégorie</label>
     <select name="cat" id="categ" class="border-2 rounded-xl text-center p-2">
       <option value="">Choisir catégorie</option>
       <option value="plat principal">Plat principal</option>
@@ -310,20 +312,45 @@
       <option value="Dessert">Dessert</option>
     </select>
     <p>Badge Qualifiant</p>
-    <div class="flex gap-4 items-center">
-      <label for="badge">Bio</label>
-      <input type="radio" name="badge" value="Bio">
-      <label for="badge">Végétarien</label>
-      <input type="radio" name="badge" value="Vegetarien">
-      <label for="badge">Classique</label>
-      <input type="radio" name="badge" value="Classique">
-    </div>
+    <select name="cat" id="badge" class="border-2 rounded-xl text-center p-2">
+      <option value="" disabled selected>--choix--</option>
+      <option value="Bio">Bio</option>
+      <option value="Végétarien">Végétarien</option>
+      <option value="Classique">Classique</option>
+    </select>
     <div class="w-full flex items-center justify-center gap-5">
       <button id="enregistrer" class="flex-1 rounded-xl bg-brand p-3 font-bold text-white hover:opacity-90 transition" type="button">Ajouter</button>
       <button id="annuler" class="flex-1 rounded-xl border border-line bg-card2 p-3 font-semibold hover:bg-line transition" type="button">Fermer</button>
     </div>
     </form>
   </div>
+  <div  id ="popupe" class="fixed  hidden inset-0 z-50  items-center justify-center bg-black/40 p-4">
+ <form  class="flex w-full max-w-md max-h-[90vh] overflow-y-auto flex-col gap-5 rounded-3xl border border-line bg-card p-6 shadow-2xl">
+    <label for="nom">Nom du plat</label>
+    <input id="nom_modi" type="text" class="border-2 rounded-xl text-center p-2 " placeholder="Entrer le nom du plat">
+    <label for="prix">Le prix</label>
+    <input id="prix_modi" type="number" placeholder="Le prix" class="border-2 rounded-xl text-center p-2">
+    <label for="categ">Choisir catégorie</label>
+    <select name="cat" id="categ_modi" class="border-2 rounded-xl text-center p-2">
+      <option value="">Choisir catégorie</option>
+      <option value="plat principal">Plat principal</option>
+      <option value="Entre">Entrée</option>
+      <option value="Dessert">Dessert</option>
+    </select>
+    <p>Badge Qualifiant</p>
+    <select name="cat" id="Badge_modi" class="border-2 rounded-xl text-center p-2">
+      <option value="Bio">Bio</option>
+      <option value="Végétarien">Végétarien</option>
+      <option value="Classique">Classique</option>
+    </select>
+    
+    <div class="w-full flex items-center justify-center gap-5">
+      <button id="enregistrer_modi" class="flex-1 rounded-xl bg-brand p-3 font-bold text-white hover:opacity-90 transition" type="button">Ajouter</button>
+      <button id="annuler_modi" class="flex-1 rounded-xl border border-line bg-card2 p-3 font-semibold hover:bg-line transition" type="button">Fermer</button>
+    </div>
+    </form>
+  </div>
+  
 
 </body>
 
