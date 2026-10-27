@@ -24,14 +24,14 @@ let recipes = [
         id:1,
         nom: "Salade marocaine",
         prix: 12,
-        categorie: "Entre",
+        categorie: "Entrée",
         badge: "Végétarien"
     },
     {
         id:2,
         nom: "Soupe de légumes",
         prix: 10,
-        categorie: "Entre",
+        categorie: "Entrée",
         badge: "Bio"
     },
     {   id:3,
@@ -108,31 +108,32 @@ const enregistrer = document.getElementById("enregistrer");
 
 function ajouterRecettes() {
     if (
-        nom.trim() === "" ||
-        prix === "" ||
-        Number(prix) <= 0 ||
-        categorie === "" ||
-        badge === ""
+        nom.value.trim() === "" ||
+        prix.value === "" ||
+        Number(prix.value) <= 0 ||
+        categorie.value === "" ||
+        badge.value === ""
     ) {
         alert("Remplissez tous les champs correctement");
         return;
     }
 
     let recette = {
-        nom: nom.trim(),
-        prix: Number(prix),
-        categorie: categorie,
-        badge: badge
+        id:Date.now(),
+        nom: nom.value.trim(),
+        prix: Number(prix.value),
+        categorie: categorie.value,
+        badge: badge.value
     };
 
     recipes.push(recette);
 
     afficherRecettes();
 
-    nom = "";
-    prix = "";
-    categorie = "";
-    badge.checked = false;
+    nom.value = "";
+    prix.value  = "";
+    categorie.value  = "";
+    badge.value = ""
 
     popup.classList.add("hidden");
     popup.classList.remove("flex");
@@ -147,7 +148,7 @@ const categorie_modi = document.getElementById("categ_modi");
 const badge_modi = document.getElementById("Badge_modi");
 const enregistrer_modi = document.getElementById("enregistrer_modi");
 const annuler_modi = document.getElementById("annuler_modi");
-let currentEditId = null;
+let elementEnCoursModif = null;
 
 function SupprimerRecettes(id) {
     recipes = recipes.filter(function(recette) {
