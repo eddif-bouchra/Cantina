@@ -1,11 +1,18 @@
 const openPopup = document.getElementById("openPopup");
 const popup = document.getElementById("popup");
 const annuler = document.getElementById("annuler");
-
-openPopup.addEventListener("click", function () {
+const popupe = document.getElementById("popupe");
+const openpopupe = document.getElementById("openpopupe")
+  function ajout(){
     popup.classList.remove("hidden");
     popup.classList.add("flex");
+    }
+
+openPopup.addEventListener("click", function () {
+  ajout();
 });
+
+
 
 annuler.addEventListener("click", function () {
     popup.classList.add("hidden");
@@ -82,7 +89,7 @@ function afficherRecettes() {
             <p class="bg-gray-400 text-white rounded-3xl">${recette.badge}</p></div>
             <div class="flex  justify-between mt-4">
             <button data-id="${recette.id}" class="bg-[#fffaf0] text-[#2a1d12] rounded-2xl">Modifier</button>
-            <button data-id="${recette.id}"id ="3ezii"  class="bg-red-700 text-white rounded-2xl">Supprimer</button>
+            <button data-id="${recette.id}"  class="bg-red-700 text-white rounded-2xl">Supprimer</button>
             </div>
             </div>
         `;
@@ -96,36 +103,35 @@ function afficherRecettes() {
 const nom = document.getElementById("nom");
 const prix = document.getElementById("prix");
 const categorie = document.getElementById("categ");
+const badge = document.getElementById("badge");
 const enregistrer = document.getElementById("enregistrer");
 
 function ajouterRecettes() {
-    let badge = document.querySelector('input[name="badge"]:checked');
-
     if (
-        nom.value.trim() === "" ||
-        prix.value === "" ||
-        Number(prix.value) <= 0 ||
-        categorie.value === "" ||
-        badge === null
+        nom.trim() === "" ||
+        prix === "" ||
+        Number(prix) <= 0 ||
+        categorie === "" ||
+        badge === ""
     ) {
         alert("Remplissez tous les champs correctement");
         return;
     }
 
     let recette = {
-        nom: nom.value.trim(),
-        prix: Number(prix.value),
-        categorie: categorie.value,
-        badge: badge.value
+        nom: nom.trim(),
+        prix: Number(prix),
+        categorie: categorie,
+        badge: badge
     };
 
     recipes.push(recette);
 
     afficherRecettes();
 
-    nom.value = "";
-    prix.value = "";
-    categorie.value = "";
+    nom = "";
+    prix = "";
+    categorie = "";
     badge.checked = false;
 
     popup.classList.add("hidden");
@@ -135,6 +141,11 @@ function ajouterRecettes() {
 enregistrer.addEventListener("click", ajouterRecettes);
 
 afficherRecettes();
+const nom_modi = document.getElementById("nom");
+const prix_modi = document.getElementById("prix");
+const categorie_modi = document.getElementById("categ");
+const badge_modi = document.getElementById("badge");
+const enregistrer_modi = document.getElementById("enregistrer_modi");
 
 function SupprimerRecettes(id) {
     recipes = recipes.filter(function(recette) {
@@ -149,4 +160,29 @@ listeRecettes.addEventListener("click", function(e) {
         let id = Number(e.target.dataset.id);
         SupprimerRecettes(id);
     }
+    if(e.target.textContent === "Modifier"){
+        ajout();
+        let id = Number(e.target.dataset.id);
+        // console.log(id)
+        recipes.forEach(element => {
+            if(element.id === id){
+                nom_modi.value = element.nom;
+                prix_modi.value = element.prix;
+                categorie_modi.value = element.categorie;
+                badge_modi.value = element.badge;
+                enregistrer_modi.addEventListener("click", (e)=>{
+                    element.nom = nom_modi.value;
+                    element.prix = prix_modi.value;
+                    element.categorie = categorie_modi.value;
+                    element.badge = badge_modi.value;
+                });
+            }
+        });
+        // if(e.target.textContent === ""){
+
+        // }
+
+    }
 });
+
+
