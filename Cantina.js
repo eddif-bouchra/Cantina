@@ -83,13 +83,13 @@ function afficherRecettes() {
 
         article.innerHTML = `
             <div class="bg-[#f6efe1] mb-4 rounded-2xl p-2">
-            <div class="flex justify-between mb-3"><h3 class="bg-[#fffaf0] text-[#2a1d12] rounded-2xl p-2">${recette.nom}</h3>
-            <p class="bg-[#c4552d] text-white rounded-2xl p-2 ">${recette.prix} DH</p></div>
-            <div class="flex "><p class="pr-2 bg-green-700 text-white mr-1.5 rounded-3xl">${recette.categorie}</p>
-            <p class="bg-gray-400 text-white rounded-3xl">${recette.badge}</p></div>
+            <div class="flex justify-between mb-3"><h3 class="bg-[#fffaf0] text-[#2a1d12] rounded-2xl px-2">${recette.nom}</h3>
+            <p class="bg-[#c4552d] text-white rounded-2xl px-2 ">${recette.prix} DH</p></div>
+            <div class="flex "><p class="pr-2 bg-green-700 text-white mr-1.5 rounded-3xl px-2">${recette.categorie}</p>
+            <p class="bg-gray-400 text-white rounded-3xl px-2">${recette.badge}</p></div>
             <div class="flex  justify-between mt-4">
-            <button data-id="${recette.id}" class="bg-[#fffaf0] text-[#2a1d12] rounded-2xl">Modifier</button>
-            <button data-id="${recette.id}"  class="bg-red-700 text-white rounded-2xl">Supprimer</button>
+            <button data-id="${recette.id}" class="bg-[#fffaf0] text-[#2a1d12] rounded-2xl px-2">Modifier</button>
+            <button data-id="${recette.id}"  class="bg-red-700 text-white rounded-2xl px-2">Supprimer</button>
             </div>
             </div>
         `;
@@ -141,11 +141,13 @@ function ajouterRecettes() {
 enregistrer.addEventListener("click", ajouterRecettes);
 
 afficherRecettes();
-const nom_modi = document.getElementById("nom");
-const prix_modi = document.getElementById("prix");
-const categorie_modi = document.getElementById("categ");
-const badge_modi = document.getElementById("badge");
+const nom_modi = document.getElementById("nom_modi");
+const prix_modi = document.getElementById("prix_modi");
+const categorie_modi = document.getElementById("categ_modi");
+const badge_modi = document.getElementById("Badge_modi");
 const enregistrer_modi = document.getElementById("enregistrer_modi");
+const annuler_modi = document.getElementById("annuler_modi");
+let currentEditId = null;
 
 function SupprimerRecettes(id) {
     recipes = recipes.filter(function(recette) {
@@ -161,11 +163,13 @@ listeRecettes.addEventListener("click", function(e) {
         SupprimerRecettes(id);
     }
     if(e.target.textContent === "Modifier"){
-        ajout();
+        popupe.classList.remove("hidden");
+        popupe.classList.add("flex");
         let id = Number(e.target.dataset.id);
         // console.log(id)
         recipes.forEach(element => {
             if(element.id === id){
+                elementEnCoursModif = element;
                 nom_modi.value = element.nom;
                 prix_modi.value = element.prix;
                 categorie_modi.value = element.categorie;
@@ -178,10 +182,30 @@ listeRecettes.addEventListener("click", function(e) {
                 });
             }
         });
-        // if(e.target.textContent === ""){
+        enregistrer_modi.addEventListener("click", function() {
+    if (elementEnCoursModif !== null) {
+        elementEnCoursModif.nom = nom_modi.value;
+        elementEnCoursModif.prix = Number(prix_modi.value);
+        elementEnCoursModif.categorie = categorie_modi.value;
+        elementEnCoursModif.badge = badge_modi.value;
+        
 
-        // }
 
+        afficherRecettes();
+        popupe.classList.add("hidden");
+        popupe.classList.remove("flex");
+
+        elementEnCoursModif = null;
+    }
+});
+if (annuler_modi) {
+    annuler_modi.addEventListener("click", function() {
+        popupe.classList.add("hidden");
+        popupe.classList.remove("flex");
+        elementEnCoursModif = null;
+    });
+}
+        
     }
 });
 
