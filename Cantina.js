@@ -210,3 +210,30 @@ if (annuler_modi) {
 });
 
 
+let planning = [{
+    Lundi: {
+        "Entrée": null,
+        "plat principal": null,
+        "Dessert": null
+    },
+    Mardi: {
+        "Entrée": null,
+        "plat principal": null,
+        "Dessert": null
+    },
+    Mercredi: {
+        "Entrée": null,
+        "plat principal": null,
+        "Dessert": null
+    },
+    Jeudi: {
+        "Entrée": null,
+        "plat principal": null,
+        "Dessert": null
+    },
+    Vendredi: {
+        "Entrée": null,
+        "plat principal": null,
+        "Dessert": null
+    },
+}]
